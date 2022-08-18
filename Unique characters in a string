@@ -1,0 +1,21 @@
+import java.util.*;
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        
+        System.out.println(unichar(s));
+    }
+    
+    static int unichar(String str){
+        int n = str.length();
+        
+        HashSet<Character> hs = new HashSet<>();
+        for(int i=0;i<n;i++)
+           hs.add(str.charAt(i));
+           
+        return hs.size();
+    }
+}
