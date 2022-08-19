@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        System.out.println(findcount(n));
+    }
+    static int findcount(int n){
+       int count =0; int j;
+       for(int i=1;i<=n;i++){
+           j=i;
+           while(j>0){
+               int d=j%10;
+               if(d==3)
+               count++;
+               j=j/10;
+           }
+       }
+       return count;
+    }
+}
